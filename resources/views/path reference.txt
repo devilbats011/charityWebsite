@@ -1,0 +1,2 @@
+ asset('test1.jpg');	<---  http://localhost:8000/test1.jpg <-- in local dir : C:\xampp\htdocs\pkas\public\test1.png
+{{asset('storage/download_img/gambar1.jpg')}}

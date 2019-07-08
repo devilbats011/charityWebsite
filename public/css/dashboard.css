@@ -1,0 +1,475 @@
+body{
+
+}
+
+*{
+	box-sizing: border-box;
+}
+#delete-pack
+{
+	display: none;
+}
+.smokescreen
+{
+	z-index:4;
+	opacity: 0.6;
+	background: black;
+	position: fixed;
+	top:-15%;
+	height: 150vh;
+	width:100vw;
+
+}
+.delete-card
+{
+	z-index:5;
+	position:fixed;
+	height: auto;
+	width: 300px;
+	background: #ddd;
+	border-radius: 6px;
+	border:1px solid grey;
+	top:40%;
+	left:50%;
+	transform: translate(-50%,-50%);
+
+}
+.delete-card > div > button.btn
+{
+	margin:5px;
+	border:1px solid crimson;
+	transition: 0.3s;
+}
+
+.delete-card > div > button.btn:hover
+{
+	background:#9a4d4d;
+	color:white;
+}
+
+.toastr-complete
+{
+	background:#4682b4 !important;
+}
+#ToastrInterface
+{
+	position: fixed;
+	top:4%;
+	right: 3%;
+	transition: 0.3s;
+	width: 350px;
+	height: 100px;
+	background: transparent;
+	z-index: 10;
+	pointer-events: none;
+}
+#ToastrInterface .Toastr-item
+{
+	background: #7ed085;#52ad5a; #4aa051;
+	margin: 2% auto;
+	width: 70%;
+	height: 70%;
+	display:flex;
+	justify-content: flex-end;
+	align-items: center;
+	overflow:hidden;
+	position: absolute;
+	transition: .2s;
+	top:0px;
+	opacity: 0;
+}
+
+.Toastr-item div
+{
+	border:0px solid gold;
+	background: #52ad5a;
+	width: 90%;
+	height: 66%;
+	display: flex;
+	flex-direction: row;
+}
+.Toastr-item div span
+{
+	position: relative;
+	border:0px solid black;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Toastr-item div span p
+{
+	position: relative;
+    margin-top: 15px;
+    font-size: 11;
+    letter-spacing: 1px;
+    color:white;
+    font-weight: bold;
+}
+.Toastr-item div span:nth-child(1)
+{
+	flex-grow: 5;
+}
+.Toastr-item div span:nth-child(1) > i
+{
+	color:white;
+	/*animation:whiteblackyasha 4s linear infinite;*/
+}
+
+/*
+@keyframes whiteblackyasha
+{
+	0%{
+		color:black;
+		transform: rotateZ(360deg);
+	}
+	50%{
+		color:white;
+		transform: rotateZ(0deg);
+	}
+	100%{
+		color:black;
+		transform: rotateZ(360deg);
+		
+	}
+}*/
+
+.Toastr-item div span:nth-child(2)
+{
+	position: relative;
+	flex-grow: 6;
+	display: flex;
+	justify-content: flex-start;
+	background: transparent;
+}
+
+.Toastr-item div span:nth-child(3)
+{
+	background: #7ed085;
+	flex-grow: 1;
+}
+
+.dashboard-container
+{
+	position: relative;
+	margin:auto;
+    width: 80%;
+    margin-top:50px;
+}
+
+
+
+.edit-wrapper
+{
+	position: relative;
+	width: 100%;
+	height:auto;
+	background: transparent !important;
+	overflow-y: hidden;
+	overflow-x:auto;
+	margin: 0px;
+	padding-bottom:3px;
+	border:0px solid #AAAAAA;
+	background: white;
+
+
+	
+}
+
+.edit-wrapper .iscroll-interface
+{
+
+	position: relative;
+	width: 300px /* using sass? */
+	height: 180px;
+	margin: 0px;
+    padding: 20px 26px;
+    border:2px solid crimson;
+    	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+
+
+
+}
+
+.iscroll-interface .button
+{
+	width: 333px;
+	height: 150px;
+	margin:5px;
+	background: #e44e6a;
+
+	background-size: cover;
+	overflow: hidden;
+	transition: 0.6s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 2px;
+
+
+}
+.iscroll-interface .button:hover
+{
+	width: 350px;
+	height: 180px;
+	background: crimson;
+
+
+}
+.iscroll-interface .button:hover p
+{
+	text-shadow: 0px 0px 5px white;
+	pointer-events: none;
+
+}
+
+.edit-header
+{
+	position: relative;
+	width: 100%;
+	height:auto;
+	background: transparent;
+	overflow-y: hidden;
+	overflow-x:auto;
+	padding:0px;
+	border:2px solid #AAAAAA;
+	background: #dddd;
+	display: grid;
+	grid-template-columns:1fr;
+	grid-template-rows: repeat(2,minmax(300px,auto));
+	grid-template-areas: 
+	"b"
+	"a";
+
+}
+
+
+#StoreHeader{
+	position: relative;
+	 grid-area: a;
+	 border:1px solid #AAAAAA;
+	 background: white;
+
+}
+.tunjukGambar
+{
+	position: relative;
+	border:0px solid red;
+	grid-area: b;
+	height: 500px;
+
+}
+.tunjukGambar img
+{
+	width: 100%;
+	height: 100%;
+}
+.tunjukGambar > p
+{
+	position: absolute;
+	left:5%;
+	top:5%;
+	color:white;
+	letter-spacing: 1px;
+	padding:15px;
+	background: black;
+	border-radius: 55%;
+	border:1px solid crimson;
+	box-shadow: inset 0px 0px 3px 1px crimson;
+}
+#StoreHeader ul{
+	display: flex;
+	width: 100%;
+	height: auto;
+	letter-spacing: 1px;
+	justify-content: space-around;
+
+}
+#StoreHeader ul li{
+	position: relative;
+	transform: translateY(-50%);
+    list-style-type: none;
+    background: crimson;
+    color:white;
+    padding:20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#StoreHeader ul li:hover {
+	text-shadow: 0px 0px 3px white;
+	letter-spacing: 1px;
+}
+
+#StoreHeader #formGambarHeader{
+
+	position: relative;
+
+}
+#StoreHeader #formGambarHeader label{
+	margin:5px;
+	border:1px solid #AAAAAA;
+}
+#StoreHeader #formGambarHeader label span{
+	margin:3px 5px;
+}
+
+#StoreHeader #formGambarHeader textarea
+{
+	width:95%;
+}
+
+#StoreHeader #formGambarHeader input[type=submit]{
+		margin:10px;
+		border:2px solid crimson;
+		background: white;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding:5px 15px;
+		transition: .3s;
+
+}
+#StoreHeader #formGambarHeader input[type=submit]:hover{
+		
+		color:white;
+		background: crimson;
+
+}
+
+.Edit-Berita{
+
+	border:0px solid crimson;
+	height:auto;
+	overflow-x:auto;
+	margin:0px 0px 20px 0px;
+/*
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows:repeat(2,1fr);
+	grid-template-areas: 
+	"tajuk date action"
+	"tx dx ax";
+	grid-template-rows: repeat(3,minmax(auto,1fr ));
+	grid-template-columns:repeat(2,minmax(auto,1fr ));
+	grid-template-areas: 
+	"tajuk tx"
+	"date dx"
+	"action ax";
+ 	mobile quieires
+ */
+
+}
+
+.Edit-Berita table{}
+
+.Edit-Berita table th,td,tr{
+	border:1px solid crimson;
+	padding: 5px;
+}
+.action_button_panel
+{
+	position: relative;
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 1fr;
+	margin:0px;
+	padding:5px 0px;
+	text-align:center;
+	border:0px solid red;
+	padding:0px;
+	
+
+}
+
+.action_button_panel div
+{
+	background: transparent;
+	position: relative;
+	padding:3px;
+
+}
+.action_button_panel > div > a.del
+{
+	pointer-events: none;
+}
+.action_button_panel button:hover
+{
+		text-shadow: 0px 0px 3px white;
+		background: black !important;
+		box-shadow: inset 0px 0px 0px white;
+		border:1px solid black !important;
+	
+}
+
+.action_button_panel div:nth-child(1) button
+{
+	background:steelblue;border:1px solid blue;
+	margin:2px;
+}
+.action_button_panel div:nth-child(2) button
+{
+	background:crimson;border:1px solid red;
+	margin:2px;
+}
+.action_button_panel div:nth-child(3) button
+{
+	background:forestgreen;border:1px solid green;
+	margin:2px;
+}
+
+
+
+
+
+#hubung_kami_grid
+{
+	position: relative;
+	background: #11111d;
+	display: grid;
+	grid-template-columns:8% repeat(3,1fr) 8%;
+	grid-template-rows: reperat(4,auto);
+	grid-template-areas: 
+	". a d f ."
+	". b e g ."
+	". c e g."
+	". h h h .";
+	padding:2% 0% 2% 0%;
+
+
+}
+
+.item{ border:0px solid gold;text-align: center; padding:5%;color:white;  min-height: 100px; }
+.item h2,.item h3{ line-height: 1.3; }
+.item h2{ color:gold;font-size: 21px;}
+.item h3{ font-size: 16px; }
+.item_a{ grid-area: a; display: flex;flex-direction: column; }
+.item_b{ grid-area: b;    }
+.item_c{ grid-area: c; background: transparent; }
+.item_c a{ margin:4%;position: relative;transition: 0.6s;cursor: pointer; color:white;}
+.item_c a:hover{ margin:6%;color:white; }
+.item_c a i{ transition:0.6s; }
+.item_c a:hover i{  transform:rotateY(-360deg) scale(1.1); color:gold;}
+.item_d{ grid-area: d;    }
+.item_e{ grid-area: e;  background: transparent;  }
+.item_e section{ display:flex; background: transparent;width:100%; }
+.item_e section h3:focus { border:2px solid mediumblue; }
+.item_e section h3{  width: 85%;background: transparent;padding-left: 50px;}
+.item_e section i{  flex-grow: 1;
+    margin-top: 22px;
+    text-align: start;
+    margin-bottom: 10px;
+}
+.item_e p{ width: 100%;display: block; background: transparent;text-align: center;margin-top:-3px; height: auto;overflow: hidden; transition: .5s;}
+.item_f{ grid-area: f;    }
+.item_g{ grid-area: g;    }
+.item_g h3:focus { border:2px solid mediumblue; }
+.item_h{ grid-area: h;  border-top: 2px solid white;padding:2.5%; margin-top:15px; }
+.item_h p{ color:white;font-size: 16px;letter-spacing: 2px; }
+
+
+

@@ -1,0 +1,135 @@
+.deleteBox
+{
+	position:fixed;z-index:10;top:50%;left:50%;transform:translate(-50%,-50%);width: 250px;height: 150px;background: white;text-align: center;
+	display: flex;flex-direction: column;color:black;justify-content: center;
+	border:3px solid black;
+	background: #11111d;
+}
+.deleteBox div
+{
+	margin:10px 10px;
+	align-items: center;
+}
+.deleteBox p{color:white;}
+.deleteBox div button{
+	position: relative;
+	margin:5px;
+	padding:5px 10px;
+
+}
+.min100-container
+{
+	position: relative;
+
+	
+	width: 100%;
+	min-height: 100vh;
+
+}
+.pkascontainer1
+{
+	background: transparent;
+	top:-60px;
+	display: grid;
+}
+.pkascontainer1 div{
+	position: relative;
+	top:60px;
+	width: 66%;
+	margin:20px auto;
+	padding:5px;
+	border:gold 1px solid;
+	box-shadow:0 0px 5px 0px gold;
+
+}
+.pkascontainer1 div img{
+	width: 100%;
+	height: 600px;
+}
+.pkascontainer1 div h1{
+	position: relative;
+	margin:0px 0px 6px 0px;
+	padding:0px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+}
+
+.pkascontainer1 div:hover h1{
+	text-shadow:0px 0px 3px white;
+}
+
+.pkascontainer1 div h1:after {
+	content:"";
+	position: absolute;
+	left:0px;
+	bottom:-2px;
+	height: 2px;
+	width: 33%;
+	margin: 0px;
+	background: white;
+}
+.pkascontainer1 div p{
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 10px auto;
+    white-space: pre-line;
+}
+.pkascontainer1 div .wrapper{
+	margin:10px 10px 10px 35px;
+	color:white;
+
+}
+#editForm input
+{
+	margin:5px 0px;
+}
+.btnAppend
+{
+	background:#11111d;
+	border:1px solid gold;padding:5px 0px; color:white;
+	transition: .3s;
+	letter-spacing: 1px;
+	margin:0px 15px 15px 0px; /*top right bottom left */
+	display:inline;
+}
+.btnAppend:hover{
+
+	text-shadow:0 0 1px white;
+}
+.AppendGambar{
+	margin:10px 0px;
+}
+.Glowing{
+
+	
+	box-shadow: 0px 0px 10px 5px #2a4bc1;
+	
+}
+.DeGlowing{
+	
+	box-shadow: 0px 0px 0px transparent;
+}
+
+#edit_form *
+{
+ margin:20px 0px;
+}
+#edit_form textarea
+{
+	width: 80%;
+
+}
+
+@media only screen and (max-width: 750px)
+{
+.pkascontainer1 div{
+
+	width: 98%;
+
+	border:gold 0px solid;
+	box-shadow:0 0px 0px 0px gold;
+
+}
+
+
+}
